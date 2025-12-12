@@ -1,0 +1,28 @@
+/* Change la couleur au survol (hover) des liens de navigation */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    /* blanc pur */
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    /* optionnel : léger éclat */
+}
+
+body {
+    padding-top: 70px;
+    /* adapte selon la hauteur de ta navbar */
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}

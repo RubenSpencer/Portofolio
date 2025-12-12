@@ -1,0 +1,62 @@
+body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    /* 4 colonnes de 80px */
+    grid-template-rows: auto repeat(4, 80px);
+    /* une ligne pour l'écran + 4 lignes de boutons */
+    gap: 10px;
+    /* espace entre les boutons */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container input {
+    grid-column: span 4;
+    /* l'input prend toute la largeur */
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+}
+
+button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+#btn-retour {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+#btn-retour:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
