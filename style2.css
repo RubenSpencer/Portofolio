@@ -1,0 +1,20 @@
+#btn-retour {
+    margin-top: 50px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    background-color: rgb(68, 35, 250);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+#btn-retour:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}

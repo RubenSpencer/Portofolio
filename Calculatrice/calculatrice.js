@@ -1,4 +1,5 @@
-let btn = document.querySelectorAll('button');
+let btn = document.querySelectorAll('.container button'); // seulement les boutons dans .container
+
 let input = document.querySelector('input');
 
 btn.forEach(function(button) {
@@ -12,3 +13,4 @@ btn.forEach(function(button) {
         }
     });
 });
+

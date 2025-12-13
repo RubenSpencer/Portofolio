@@ -15,7 +15,7 @@
     <!-- BARE DE NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#acceuil">Portofolio</a>
+            <a class="navbar-brand" href="#acceuil">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,6 @@
     </nav>
     <!-- BARE DE NAVIGATION -->
     <br>
-
     <center>
         <h1>Ruben Spencer Desir</h1>
     </center>
@@ -69,14 +68,14 @@
 
                             Je suis à présent toujours en étude et compte potentiellement continuer en me dirigeant vers
                             une licence, je vous laisse à présent regarder mes projets et compétences, ci dessous vous
-                            pouvez retrouvez mon CV !
+                            pouvez retrouvez mon CV téléchargeable !
 
                         </p>
                         <div class="d-flex gap-2 mt-auto">
-                            <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                            <!-- <a href="#" class="btn btn-primary btn-sm">View Project</a> -->
                             <a href="fichier/CV ALTERNANCE WEB.pdf" class="btn btn-outline-secondary btn-sm"
                                 download="">Download CV</a>
-                            <a href="#" class="btn btn-outline-info btn-sm">More Photos</a>
+                            <!-- <a href="#" class="btn btn-outline-info btn-sm">More Photos</a> -->
                         </div>
                     </div>
                 </div>
@@ -125,7 +124,7 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="imgProjet/pink calculator.jpg" class="card-img-top" alt="Projet 1">
+                    <img src="imgProjet/CALCULATOOOR.png" class="card-img-top" alt="Projet 1">
                     <div class="card-body">
                         <h5 class="card-title">Projet 1(Calculatrice)</h5>
                         <p class="card-text">Calculatrice simple permettnt d'effectuer des calcules de base.</p>
@@ -135,11 +134,11 @@
             </div>
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="imgProjet/horloge.jpg" class="card-img-top" alt="Projet 2">
+                    <img src="img/DéFromChatGPT.png" class="card-img-top" alt="Projet 2">
                     <div class="card-body">
-                        <h5 class="card-title">Projet 2(Horloge)</h5>
-                        <p class="card-text">Une horloge simple mais technique.</p>
-                        <a href="#" class="btn btn-primary">Voir le projet</a>
+                        <h5 class="card-title">Autre mini projet JavaScript</h5>
+                        <p class="card-text">Vous y trouverez tout mes mini projets en JavaScript</p>
+                        <a href="pageProjet.html" class="btn btn-primary">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -147,13 +146,12 @@
                 <div class="card h-100 shadow-sm">
                     <img src="image3.jpg" class="card-img-top" alt="Projet 3">
                     <div class="card-body">
-                        <h5 class="card-title">Projet 3(En cours, dashboard)</h5>
-                        <p class="card-text">Petite description de ton projet.</p>
-                        <a href="#" class="btn btn-primary">Voir le projet</a>
+                        <h5 class="card-title">Projet 3(En cours, dashboard, Blog)</h5>
+                        <p class="card-text">En cours.</p>
+                        <a href="#" id="trollBtn" class="btn btn-primary">Y'a rien ne cliquer pas</a>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- end of "sous compétence" -->
@@ -200,6 +198,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script>
+    const btn = document.getElementById("trollBtn");
+    let clickCount = 0;
+
+    btn.addEventListener("click", function (e) {
+        e.preventDefault(); // empêche le lien #
+
+        clickCount++;
+
+        if (clickCount === 1) {
+            btn.textContent = "Stop, il n'y a rien, arretez donc de me toucher !";
+        } 
+        else if (clickCount === 2) {
+            btn.textContent = "😠";
+            btn.classList.add("disabled");
+            btn.style.pointerEvents = "none";
+            btn.style.opacity = "0.6";
+        }
+    });
+</script>
+
 </body>
 
 </html>
