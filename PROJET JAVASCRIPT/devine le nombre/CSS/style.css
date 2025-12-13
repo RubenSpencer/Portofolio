@@ -1,0 +1,26 @@
+body{
+    background-color: coral;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 5px;
+}
+
+.titre {
+    font-size: 25px;
+    color: crimson;
+    font-style:inherit;
+    font: bold;
+}
+
+.container {
+    background-color: rgb(255, 158, 122);
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 25px;
+}
