@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interface Violet</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Ton CSS personnalisé -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
-<div class="Corp">
-    <input id="display" type="text" disabled >
-    <p style="background-color: bisque; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: brown;" id="affichage-batonnets"></p>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
 
-    <div class="buttons">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-    </div>
+<div class="card shadow-lg corp-custom text-center p-4">
     
+    <input id="display" type="text" class="form-control text-center mb-3" disabled>
+
+    <p id="affichage-batonnets" class="alert alert-light py-2"></p>
+
+    <div class="d-flex justify-content-center gap-2">
+        <button class="btn btn-violet">1</button>
+        <button class="btn btn-violet">2</button>
+        <button class="btn btn-violet">3</button>
+    </div>
+
 </div>
 
 <script src="js/app.js"></script>

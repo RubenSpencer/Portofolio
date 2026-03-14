@@ -15,6 +15,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     transition: transform .2s ease, box-shadow .2s ease;
+    padding-left: 10px;
 }
 
 .card:hover {
