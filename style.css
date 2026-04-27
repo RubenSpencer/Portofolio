@@ -28,3 +28,42 @@ body {
     object-fit: cover;
 }
 
+.skill-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.skill-img {
+    height: 80px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.skill-img {
+    height: 80px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.skill-java {
+    transform: scale(1.2);
+}
+
+.social-card .card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-img {
+    height: 50px;
+    /* hauteur fixe pour tous les logos */
+    width: auto;
+    /* garde le ratio original */
+    object-fit: contain;
+}

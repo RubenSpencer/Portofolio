@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veille Technologique - Cloud Computing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding-top: 56px;
+        background-color: #f8f9fa;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, #1f4e79 0%, #2e75b6 100%);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      .info-card {
+        background: white;
+        border-left: 4px solid #2e75b6;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card strong {
+        color: #1f4e79;
+      }
+
+      section {
+        margin-bottom: 50px;
+      }
+
+      section h2 {
+        color: #1f4e79;
+        border-bottom: 3px solid #2e75b6;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+
+      table.table-custom {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      section h3 {
+        color: #2e75b6;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .table-custom {
+        background: white;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .table-custom thead {
+        background: #1f4e79;
+        color: white;
+      }
+
+      .table-custom thead th {
+        padding: 15px;
+        font-weight: 600;
+        border: none;
+      }
+
+      .table-custom tbody td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .table-custom tbody tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      .table-custom tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+
+      .advantage-list,
+      .risk-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .advantage-list li,
+      .risk-list li {
+        padding: 10px 0 10px 30px;
+        position: relative;
+        line-height: 1.6;
+        color: #2c2c2c;
+      }
+
+      .advantage-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #28a745;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .risk-list li:before {
+        content: "⚠";
+        position: absolute;
+        left: 0;
+        color: #dc3545;
+        font-size: 1rem;
+      }
+
+      .actor-box {
+        background: white;
+        border-left: 5px solid #2e75b6;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .actor-box strong {
+        color: #1f4e79;
+        font-size: 1.1rem;
+      }
+
+      .highlight-box {
+        background: #d6e4f0;
+        border-left: 4px solid #2e75b6;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+
+      .conclusion-box {
+        background: linear-gradient(135deg, #d6e4f0 0%, #ebf3fb 100%);
+        border-left: 5px solid #2e75b6;
+        padding: 30px;
+        border-radius: 5px;
+        margin-top: 40px;
+      }
+
+      .footer-vt {
+        background: #343a40;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      ul.summary-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul.summary-list li {
+        padding: 8px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      ul.summary-list li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #2e75b6;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="veille.html">Veille</a>
+            </li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="veilleTechno.html"
+                >Cloud Computing</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+      <h1>VEILLE TECHNOLOGIQUE</h1>
+      <p>Le Cloud Computing en Entreprise</p>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- INFO SECTION -->
+      <div class="row mb-5">
+        <div class="col-md-8 offset-md-2">
+          <div class="info-card">
+            <p>
+              <strong>Objectif :</strong> Comprendre le fonctionnement du cloud
+              computing et analyser ses avantages, ses limites et son
+              utilisation en entreprise.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="info-card">
+                <p>
+                  <strong>Auteur :</strong> Étudiant(e) BTS SIO / BUT
+                  Informatique
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-card">
+                <p><strong>Année scolaire :</strong> 2024-2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="info-card">
+                <p><strong>Date de rédaction :</strong> Avril 2025</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-card">
+                <p>
+                  <strong>Domaine :</strong> Systèmes & Réseaux / Cloud
+                  Computing
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE OF CONTENTS -->
+      <section>
+        <h2>Sommaire</h2>
+        <ul class="summary-list">
+          <li>1. Introduction</li>
+          <li>2. Qu'est-ce que le Cloud Computing ?</li>
+          <li>3. Les grands acteurs du marché</li>
+          <li>4. Avantages du Cloud en entreprise</li>
+          <li>5. Limites et risques</li>
+          <li>6. Cas d'usage : le Cloud Gaming</li>
+          <li>7. Conclusion</li>
+        </ul>
+      </section>
+
+      <!-- INTRODUCTION -->
+      <section>
+        <h2>1. Introduction</h2>
+        <p>
+          Le cloud computing est aujourd'hui un pilier des infrastructures
+          informatiques modernes. Que ce soit pour héberger des applications,
+          stocker des données, ou exécuter des services à la demande, le cloud
+          transforme profondément la manière dont les entreprises opèrent.
+        </p>
+
+        <p>
+          Cette veille technologique a pour objectif d'analyser les avantages,
+          les limites et les usages du cloud computing en entreprise, afin de
+          mieux appréhender son rôle dans les systèmes informatiques actuels.
+          Elle s'adresse à un public technique et s'appuie sur des sources
+          spécialisées du secteur.
+        </p>
+      </section>
+
+      <!-- CLOUD COMPUTING DEFINITION -->
+      <section>
+        <h2>2. Qu'est-ce que le Cloud Computing ?</h2>
+        <p>
+          Le cloud computing désigne l'accès à des ressources informatiques
+          (serveurs, stockage, bases de données, réseau, logiciels) via
+          Internet, à la demande et généralement sous forme d'abonnement. On
+          distingue trois grands modèles de service :
+        </p>
+
+        <table class="table table-custom">
+          <thead>
+            <tr>
+              <th style="width: 20%">Modèle</th>
+              <th style="width: 40%">Description</th>
+              <th style="width: 40%">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IaaS</strong></td>
+              <td>
+                Infrastructure as a Service : location de serveurs virtuels,
+                stockage et réseau.
+              </td>
+              <td>Amazon EC2, Azure VM</td>
+            </tr>
+            <tr>
+              <td><strong>PaaS</strong></td>
+              <td>
+                Platform as a Service : environnement de développement et de
+                déploiement d'applications.
+              </td>
+              <td>Heroku, Google App Engine</td>
+            </tr>
+            <tr>
+              <td><strong>SaaS</strong></td>
+              <td>
+                Software as a Service : logiciels accessibles directement via
+                navigateur.
+              </td>
+              <td>Microsoft 365, Google Workspace</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          On distingue également plusieurs modes de déploiement : le
+          <strong>cloud public</strong> (ressources mutualisées, accessibles à
+          tous), le <strong>cloud privé</strong> (infrastructure dédiée à une
+          organisation), et le <strong>cloud hybride</strong> (combinaison des
+          deux).
+        </p>
+      </section>
+
+      <!-- MARKET ACTORS -->
+      <section>
+        <h2>3. Les grands acteurs du marché</h2>
+        <p>
+          Le marché du cloud est dominé par trois hyperscalers qui concentrent
+          la majorité des parts de marché mondiales :
+        </p>
+
+        <div class="actor-box">
+          <strong>AWS (Amazon Web Services)</strong>
+          <p>
+            Amazon Web Services est le leader incontesté du cloud depuis sa
+            création en 2006. Il propose plus de 200 services : calcul, stockage
+            (S3), bases de données (RDS), IA, etc. Utilisé par Netflix, Airbnb,
+            la NASA…
+          </p>
+        </div>
+
+        <div class="actor-box">
+          <strong>Azure (Microsoft)</strong>
+          <p>
+            Microsoft Azure est le deuxième acteur mondial, très présent en
+            entreprise grâce à son intégration avec l'écosystème Microsoft
+            (Windows Server, Active Directory, Teams). Cible prioritaire des
+            DSI.
+          </p>
+        </div>
+
+        <div class="actor-box">
+          <strong>GCP (Google Cloud Platform)</strong>
+          <p>
+            Google Cloud Platform se distingue par ses capacités en Big Data
+            (BigQuery), Intelligence Artificielle et Machine Learning, ainsi que
+            Kubernetes, technologie open source créée par Google.
+          </p>
+        </div>
+
+        <p class="mt-4">
+          <strong>D'autres acteurs notables :</strong> OVHcloud (leader
+          européen, souveraineté des données), Alibaba Cloud (dominant en Asie),
+          IBM Cloud (orienté entreprise et IA).
+        </p>
+      </section>
+
+      <!-- ADVANTAGES -->
+      <section>
+        <h2>4. Avantages du Cloud en entreprise</h2>
+
+        <h3>4.1 Flexibilité et scalabilité</h3>
+        <p>
+          Le cloud permet d'adapter les ressources informatiques en temps réel
+          selon les besoins. Une entreprise peut augmenter sa capacité de calcul
+          en quelques minutes lors d'un pic d'activité, puis la réduire pour
+          limiter les coûts. C'est ce que l'on appelle l'élasticité.
+        </p>
+
+        <h3>4.2 Réduction des coûts</h3>
+        <p>
+          Le modèle « pay-as-you-go » (paiement à l'usage) supprime la nécessité
+          d'investir dans une infrastructure physique coûteuse. Les entreprises
+          transforment ainsi des CAPEX (dépenses d'investissement) en OPEX
+          (dépenses opérationnelles), ce qui allège leur bilan financier.
+        </p>
+
+        <h3>4.3 Disponibilité et continuité de service</h3>
+        <p>
+          Les grands fournisseurs cloud garantissent des SLA (Service Level
+          Agreements) avec des taux de disponibilité souvent supérieurs à 99,9
+          %. Les données sont répliquées dans plusieurs centres de données
+          géographiquement dispersés, assurant la continuité en cas de panne.
+        </p>
+
+        <h3>4.4 Collaboration et mobilité</h3>
+        <p>
+          Le cloud facilite le travail collaboratif : des équipes situées dans
+          des pays différents peuvent accéder aux mêmes ressources, applications
+          et données en temps réel. Ce point a été crucial durant la crise
+          sanitaire de 2020 avec la généralisation du télétravail.
+        </p>
+
+        <h3>4.5 Sécurité renforcée</h3>
+        <p>
+          Contrairement aux idées reçues, les grands fournisseurs cloud
+          investissent massivement dans la sécurité : chiffrement des données,
+          certifications ISO 27001, SOC 2, audits réguliers. Ils disposent
+          souvent d'équipes de cybersécurité plus importantes que la plupart des
+          entreprises.
+        </p>
+      </section>
+
+      <!-- RISKS AND LIMITS -->
+      <section>
+        <h2>5. Limites et risques</h2>
+        <p>
+          Malgré ses nombreux avantages, le cloud présente également des limites
+          qu'il est important d'identifier et d'anticiper :
+        </p>
+
+        <table class="table table-custom mt-4">
+          <thead>
+            <tr>
+              <th style="width: 30%">Risque / Limite</th>
+              <th style="width: 70%">Explication</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Dépendance au fournisseur (Vendor lock-in)</strong>
+              </td>
+              <td>
+                Migrer d'un fournisseur à un autre peut être long et coûteux.
+                Les formats propriétaires complexifient la portabilité.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Conformité réglementaire (RGPD)</strong></td>
+              <td>
+                Les données stockées hors de l'UE posent des problèmes
+                juridiques. Les entreprises européennes doivent vérifier la
+                localisation des data centers.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Risques de sécurité</strong></td>
+              <td>
+                Bien que les fournisseurs soient sécurisés, une mauvaise
+                configuration par l'entreprise (S3 Bucket public, mauvais IAM)
+                peut exposer des données sensibles.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Connectivité</strong></td>
+              <td>
+                Le cloud nécessite une connexion Internet fiable et performante.
+                Une panne réseau peut paralyser l'accès aux applications
+                critiques.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Coûts imprévus</strong></td>
+              <td>
+                Sans une bonne gouvernance, les coûts peuvent rapidement
+                dépasser les prévisions. La gestion des ressources cloud
+                (FinOps) est un métier à part entière.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- CLOUD GAMING USE CASE -->
+      <section>
+        <h2>6. Cas d'usage : le Cloud Gaming</h2>
+        <p>
+          Le cloud gaming est une application concrète du cloud computing dans
+          le secteur du jeu vidéo. Il permet de jouer à des jeux vidéo sans PC
+          ou console performante, en déportant le calcul graphique sur des
+          serveurs distants.
+        </p>
+
+        <h3>6.1 Fonctionnement</h3>
+        <p>
+          Le jeu tourne sur un serveur distant (GPU puissant). Les frames vidéo
+          sont encodées et transmises en streaming vers l'écran de
+          l'utilisateur. Les actions du joueur (clavier, manette) sont renvoyées
+          au serveur avec une latence la plus faible possible.
+        </p>
+
+        <h3>6.2 Acteurs principaux</h3>
+        <ul class="advantage-list">
+          <li>
+            <strong>NVIDIA GeForce NOW :</strong> accès à sa propre bibliothèque
+            Steam/Epic depuis n'importe quel appareil
+          </li>
+          <li>
+            <strong>Shadow (Blade) :</strong> PC Windows complet dans le cloud,
+            solution flexible pour particuliers et entreprises
+          </li>
+          <li>
+            <strong>Xbox Cloud Gaming (Microsoft) :</strong> intégré au Game
+            Pass, disponible sur mobile, tablette et navigateur
+          </li>
+          <li>
+            <strong>Google Stadia :</strong> arrêté en 2023, mais son
+            infrastructure technique a été rachetée par d'autres acteurs
+          </li>
+        </ul>
+
+        <h3>6.3 Lien avec le cloud d'entreprise</h3>
+        <p>
+          Au-delà du gaming, ces technologies de streaming d'applications ont
+          des usages professionnels : postes de travail virtuels (VDI),
+          logiciels de CAO ou de rendu 3D accessibles depuis n'importe quel
+          terminal. Des entreprises comme Workspot ou Citrix proposent des
+          solutions similaires pour le monde professionnel.
+        </p>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>7. Conclusion</h2>
+        <div class="conclusion-box">
+          <p>
+            Le cloud computing est devenu incontournable dans le paysage
+            informatique des entreprises. Sa flexibilité, son modèle économique
+            à l'usage et ses capacités d'innovation (IA, Big Data, serverless)
+            en font un levier stratégique majeur.
+          </p>
+
+          <p>
+            Cependant, sa mise en œuvre requiert une véritable expertise : choix
+            du fournisseur, gestion des coûts, conformité réglementaire et
+            cybersécurité sont des enjeux que tout professionnel de
+            l'informatique doit maîtriser.
+          </p>
+
+          <p>
+            Cette veille sera amenée à évoluer, car le cloud est un domaine en
+            perpétuelle mutation : nouvelles offres, nouvelles réglementations
+            (Cloud Act, RGPD, AI Act), et nouvelles architectures (edge
+            computing, serverless, conteneurs) viennent régulièrement
+            transformer les pratiques.
+          </p>
+        </div>
+
+        <div class="highlight-box mt-4">
+          <strong>Points clés à retenir :</strong>
+          <ul class="advantage-list mt-3">
+            <li>
+              Le cloud offre flexibilité, scalabilité et réduction des coûts
+            </li>
+            <li>Trois modèles principaux : IaaS, PaaS, SaaS</li>
+            <li>AWS, Azure et GCP dominent le marché mondial</li>
+            <li>
+              Risques à surveiller : sécurité, conformité RGPD, vendor lock-in
+            </li>
+            <li>
+              Le cloud gaming illustre l'extension du cloud vers le grand public
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container text-center">
+        <p>&copy; 2025 Veille Technologique - Cloud Computing en Entreprise</p>
+        <p>
+          <a href="index.html" class="text-decoration-none text-white"
+            >Retour au portfolio</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtKeC9+NyWngcrkKEp+0DRequelXdVzH6VZkZ9bTTomNzWY80kavQNo/xfZ4GY"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
