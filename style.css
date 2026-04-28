@@ -26,6 +26,23 @@ body {
 .card-img-top {
     height: 200px;
     object-fit: cover;
+    width: 100%;
+}
+
+.card-img-top[src$=".svg"] {
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Me retrouver section */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .skill-img {
