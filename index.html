@@ -265,12 +265,12 @@
             </div>
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="imgProjet/EletrcoShop.svg" class="card-img-top" alt="Projet 3">
+                    <img src="img/GameFinder.png" class="card-img-top" alt="Projet 3">
                     <div class="card-body">
                         </h5>
-                        <h5>Site E-Commerce, ElectroShop</h5>
-                        <p class="card-text">En cours.</p>
-                        <a href="#" id="trollBtn" class="btn btn-primary">Y'a rien ne cliquer pas</a>
+                        <h5>GameFinder</h5>
+                        <p class="card-text">Site pour trouver des jeux</p>
+                        <a href="https://rubenspencer.github.io/GameFinder/" class="btn btn-primary">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -393,33 +393,9 @@
         </div>
     </footer>
 
-    <!-- partie javascript -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script>
-        const btn = document.getElementById("trollBtn");
-        let clickCount = 0;
 
-        btn.addEventListener("click", function (e) {
-            e.preventDefault(); // empêche le lien #
 
-            clickCount++;
-
-            if (clickCount === 1) {
-                btn.textContent = "Stop, il n'y a rien, arretez donc de me toucher !";
-            }
-            else if (clickCount === 2) {
-                btn.textContent = "😠";
-                btn.classList.add("disabled");
-                btn.style.pointerEvents = "none";
-                btn.style.opacity = "0.6";
-            }
-        });
-    </script>
-
-    <!-- fin partie javascript -->
 
 </body>
 
